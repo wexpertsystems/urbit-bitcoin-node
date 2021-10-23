@@ -60,7 +60,7 @@ docker run -d --name urbit-bitcoin-node -v /mnt/bitcoin/bitcoin_data:/bitcoin/da
 
 A few notes here: 
 
-- `/mnt/bitcoin/bitcoin_data` is a placeholder path -- replace it with whatever path you want to hold the blockchain in. Remember that it needs at least 500GB of free space.
+- `/mnt/bitcoin/bitcoin_data` is a placeholder path -- replace it with whatever path you want to hold the blockchain in. Remember that it needs at least 600GB of free space.
 - `8333` is the `bitcoind` p2p port; `50002` is the RPC port. These ports are exposed on the host machine's network interface, so you can reach them from other devices.
 - Once you start running the container, it will **probably take about two days** for the blockchain to finish syncing and indexing. You can check on its progress by watching the terminal output. 
 
@@ -142,13 +142,13 @@ dojo> :btc-provider +bitcoin!btc-provider/command [%add-whitelist %kids ~]
 For all members of a group:
 
 ```
-dojo> :btc-provider +bitcoin!btc-provider/command [%groups groups=(sy ~[[~sampel %group-name]])]]
+dojo> :btc-provider +bitcoin!btc-provider/command [%add-whitelist [%groups groups=(sy ~[[~sampel %group-name]])]]
 ```
 
 For a specific `@p`:
 
 ```
-dojo> :btc-provider +bitcoin!btc-provider/command [%users users=(sy ~[~wallet-hodler])]]
+dojo> :btc-provider +bitcoin!btc-provider/command [%add-whitelist [%users users=(sy ~[~wallet-hodler])]]
 ```
 
 To allow public use/global whitelist:
