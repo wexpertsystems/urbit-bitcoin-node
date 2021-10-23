@@ -1,6 +1,6 @@
 # %btc-provider full node on Docker
 
-[Github](https://github.com/wexpertsystems/urbit-bitcoin-node)
+[Dockerhub](https://hub.docker.com/r/wexpertsystems/urbit-bitcoin-node)
 
 Urbits communicate with the Bitcoin blockchain via providers, who themselves are connected to full nodes running a few pieces of extra software. This stack can be a little complicated to set up on your own -- using this Docker container should simplify setup and scaling. 
 
