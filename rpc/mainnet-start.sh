@@ -1,7 +1,7 @@
 #!/bin/bash
 ##########################
 # Set host.docker.internal
-# sudo /usr/bin/append-to-hosts "$(ip -4 route list match 0/0 | awk '{print $3 "\thost.docker.internal"}')"
+sudo /usr/bin/append-to-hosts "$(ip -4 route list match 0/0 | awk '{print $3 "\thost.docker.internal"}')"
 echo Running modified mainnet script...
 export BTC_RPC_PORT=${BITCOIN_RPC_PORT}
 export ELECTRS_HOST=${ELECTRUM_IP}
