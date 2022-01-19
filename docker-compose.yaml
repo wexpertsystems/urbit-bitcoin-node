@@ -6,7 +6,7 @@ services:
     restart: on-failure
     stop_grace_period: 1m
     ports:
-      - 50002:50002 50003:50003
+      - 50002:50002
     environment:
       $ELECTRUM_IP: $ELECTRUM_PORT
       $ELECTRUM_PORT: $ELECTRUM_PORT
