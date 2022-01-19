@@ -1,0 +1,17 @@
+version: "3.7"
+
+services:
+  web:
+    image: urbit-btc-node:staging
+    restart: on-failure
+    stop_grace_period: 1m
+    ports:
+      - 50002:50002
+    environment:
+      $ELECTRUM_IP: $ELECTRUM_PORT
+      $ELECTRUM_PORT: $ELECTRUM_PORT
+      $BITCOIN_IP: $BITCOIN_IP
+      $BITCOIN_RPC_PORT: $BITCOIN_RPC_PORT
+      $BITCOIN_RPC_USER: $BITCOIN_RPC_USER
+      $BITCOIN_RPC_PASS: $BITCOIN_RPC_PASS
+      $BITCOIN_RPC_AUTH: $BITCOIN_RPC_AUTH
