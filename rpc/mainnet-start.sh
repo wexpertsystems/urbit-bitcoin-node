@@ -11,5 +11,4 @@ export ELECTRS_PORT=${ELECTRUM_PORT}
 # and $BITCOIN_IP
 export PROXY_PORT=50002
 
-node src/server.js &
-
+node src/server.js
