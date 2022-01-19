@@ -10,6 +10,8 @@ const btcRpcPort = process.env.BTC_RPC_PORT;
 const btcRpcUrl = `127.0.0.1:${btcRpcPort}/`;
 const electrsHost = process.env.ELECTRS_HOST;
 const electrsPort = process.env.ELECTRS_PORT;
+const btcRpcUser = process.env.BITCOIN_RPC_USER;
+const btcRpcPass = process.env.BITCOIN_RPC_PASSWORD;
 // console.log(`INFO PROXY: btc rpc pass: ${btcCookiePass}`)
 console.log(`INFO PROXY: Electrs host: ${electrsHost}:${electrsPort}`);
 
@@ -75,7 +77,7 @@ const bRpc = (rpcCall) => {
       "content-type": "text/plain;",
     };
     const options = {
-      url: `http://${BITCOIN_RPC_USER}:${BITCOIN_RPC_PASSWORD}@${btcRpcUrl}`,
+      url: `http://${btcRpcUser}:${btcRpcPass}@${btcRpcUrl}`,
       method: "POST",
       headers: headers,
       body: JSON.stringify(rpcCall),
