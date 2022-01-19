@@ -14,7 +14,7 @@ export PROXY_PORT=50002
 # bitcoind is not on localhost
 sed -e 's/127.0.0.1/${BITCOIN_IP}/g' src/server.js
 # Umbrel bitcoind uses RPC auth rather than cookie
-sed -e 's/__cookie__\:${btcCookiePass}/${BITCOIN_RPC_USER}${BITCOIN_RPC_PASSWORD}/g' src/server.js
+# sed -e 's/__cookie__\:${btcCookiePass}/${BITCOIN_RPC_USER}:${BITCOIN_RPC_PASSWORD}/g' src/server.js
 
 node src/server.js &
 

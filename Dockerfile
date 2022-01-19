@@ -46,6 +46,7 @@ COPY --from=urbit-rpc-builder /urbit-bitcoin-rpc/src /src
 
 # Overwrite two files in the dist with our local slightly modified versions
 ADD /rpc/mainnet-start.sh /mainnet-start.sh
+ADD /rpc/server.js /src/server.js
 
 RUN npm install express
 RUN npm audit fix
