@@ -2,13 +2,13 @@ version: "3.7"
 
 services:
   web:
-    image: urbit-btc-node:staging
+    image: matwet/urbit-btc-node:x86
     restart: on-failure
     stop_grace_period: 1m
     ports:
       - 50002:50002
     environment:
-      $ELECTRUM_IP: $ELECTRUM_PORT
+      $ELECTRUM_IP: $ELECTRUM_IP
       $ELECTRUM_PORT: $ELECTRUM_PORT
       $BITCOIN_IP: $BITCOIN_IP
       $BITCOIN_RPC_PORT: $BITCOIN_RPC_PORT
