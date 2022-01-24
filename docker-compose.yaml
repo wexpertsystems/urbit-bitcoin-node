@@ -2,7 +2,7 @@ version: "3.7"
 
 services:
   web:
-    image: matwet/urbit-btc-node:x86
+    image: matwet/urbit-btc-node:latest
     restart: on-failure
     stop_grace_period: 1m
     ports:
